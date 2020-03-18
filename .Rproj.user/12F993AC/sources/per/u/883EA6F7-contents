@@ -1,0 +1,18 @@
+install.packages("depency")
+install.packages("knitr")
+## packages 
+library (googlesheets4)
+library(dplyr)
+library(lubridate)
+install.packages(c("googlesheets4"))
+library(dplyr)
+a -> 2
+a <- 2
+a = 2 # = 與 <-同義
+3 -> b
+4 -> c
+a
+a
+b
+c
+a + b + c
