@@ -1,0 +1,42 @@
+install.packages("depency")
+install.packages("knitr")
+## packages 
+library (googlesheets4)
+library(dplyr)
+library(lubridate)
+install.packages(c("googlesheets4"))
+library(dplyr)
+a -> 2
+a <- 2
+a = 2 # = 與 <-同義
+3 -> b
+4 -> c
+a
+a
+b
+c
+a + b + c
+12 +3*6
+12.235e3
+five <- 5
+print(five)
+lonely <- 1
+walk_alone <- 2
+lone_name <-3
+apropos("lone")
+apropos("lonely")
+sum (1:10)
+hello <- "hello"
+print("hello")
+my_108_total_credits <- 15
+
+108_total_credits <- 15
+
+my.108.total_credits <- 15
+
+.my.108.total_credits <- 15
+我的108學年總學分數 <- 15
+`我的108學年總學分數` <- 15 # 特殊名稱處理，`不是名稱的一部份
+`.108.total_credits` <- 15
+"我的年紀" <- 20
+my_age <- "我的年紀"

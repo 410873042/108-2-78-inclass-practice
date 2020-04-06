@@ -68,11 +68,54 @@ class (studentId)
 as.character(studentId)
 ```
 ```{r}
-pgDateTime <- mdy_hms("Mar.18,2020,05：52：40",tz = "Europe/Lisbon")
-pgDateTime
-typeof(pgDateTime)
-as.double(pgDateTime)
+as.integer(stringInteger)
+class(stringInteger)
 ```
+```{r}
+stringInteger <- c("1","2","-11")
+class(stringInteger) # 無法進行數值運算
+```
+```{r}
+trueInteger <- as.integer(stringInteger)
+class(trueInteger) # 可以進行數值運算
+typeof(trueInteger)
+trueInteger+2
+```
+```{r}
+char3 <- c("小明","1","3")
+as.integer(char3)
+```
+```{r}
+as.integer(stringInteger)
+class(stringInteger)
+
+```
+```{r}
+stringInteger <- as.integer(stringInteger)
+class(stringInteger)
+```
+```{r}
+library(lubridate)
+```
+```{r}
+tpeTime <- ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+```{r}
+library(lubridate)
+tpeTime <- ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+```{r}
+tpTime <- ymd_hms("2020-03-25 17：05：08",
+                  tz = "taipei")
+```
+```{r}
+library(lubridate)
+tpTime <- ymd_hms("2020-03-25 17：05：08",
+                  tz = "taipei")
+```
+
 
 
 
