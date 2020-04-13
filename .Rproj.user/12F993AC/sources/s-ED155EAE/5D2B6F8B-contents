@@ -136,4 +136,142 @@ listExample[c("學期")]
 listExample[c("student","學期")]
 listExample[c(1,2)], max.level = 1)
 ```
+```{r}
+# 顯示到第一層
+str(listExample, max.level=1)
+
+listExample[c("學期")]
+listExample[c("student","學期")]
+```
+```{r}
+str(listExample, max.level=1)
+listExample[c(1,2)]
+str(listExample[c(1,2)],max.level = 1)
+```
+```{r}
+str(listExample[c(1,2)],max.level = 1)
+```
+```{r}
+str(listExample[c(2,1)],max.level = 1)
+```
+```{r}
+str(tainanSportsMap,max.level = 1)
+```
+```{r}
+str(tainanSportsMap[c(1,382,472)],max.level = 1)
+```
+```{r}
+# 顯示到第一層
+str(listExample, max.level=1)
+
+listExample[c("學期")]
+listExample[c("student","學期")]
+```
+```{r}
+listExample[c("student","學期")]
+```
+```{r}
+fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
+```
+```{r}
+vectorExample
+vectorExample[c(T,T,F)] # 要，要，不要
+```
+```{r}
+str(listExample[c(F,T)]) # 不要，要
+str(listExample[c(T,T)]) # 要，要
+```
+```{r}
+names(taipeiNightMarket)
+```
+```{r}
+fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
+```
+```{r}
+library(jsonlite)
+fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
+```
+```{r}
+names(taipeiNightMarkets)
+```
+```{r}
+c(T,F,F,
+  F,T,F,
+  F,F,F,
+  T,F,F,
+  F,T) -> selectedNightMarkets
+
+str(taipeiNightMarkets[c(T,F,F,
+  F,T,F,
+  F,F,F,
+  T,F,F,
+  F,T)],max.level = 1)
+
+```
+```{r}
+taipeiNightMarkets[selectedNightMarkets]
+```
+```{r}
+selectedMarkets <- rep(F,14)
+print(selectedMarkets)
+selectedMarkets[c(1,5,10,14)] <- TRUE
+print(selectedMarkets)
+```
+```{r}
+str(taipeiNightMarkets[selectedMarkets],max.level = 1)
+```
+```{r}
+str(listExample,max.level = 3)
+```
+```{r}
+str(listExample)
+```
+```{r}
+get1 <- listExample[["學期"]]
+get2 <- listExample["學期"]
+```
+```{r}
+get1 <- listExample[["學期"]]
+str(get1, max.level = 1)
+```
+```{r}
+get2 <- listExample["學期"]# listExample 只留下 學期元素，是個只有一個元素的list
+str(get2,max.level = 1)
+str(get2,max.level = 2)
+```
+```{r}
+numVector <- c(2,3,6,-1,4,2,6)
+select1 <- numVector[c(1,4)]; select1
+select2 <- select1[[1]]; select2
+
+# 相當於
+numVector[c(1,4)][[1]]
+```
+```{r}
+select1 <- numVector[c(T,T,F,T,F,F,T)]; select1
+select2 <- select1[c(1,4)]; select2
+
+# 相當於
+numVector[c(T,T,F,T,F,F,T)][c(1,4)]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
