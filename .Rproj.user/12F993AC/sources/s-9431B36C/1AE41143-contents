@@ -182,6 +182,7 @@ example$allowance <-
     levels=c("0-1000", "1001-2000", "2000+"),
     ordered = T # 設定為可排序factor
   )
+
 ```
 ```{r}
 jsonlite::fromJSON("https://www.dropbox.com/s/3uijub7xheib405/list_victimAges_female.json?dl=1", simplifyDataFrame = F) -> list_victimAges_female
