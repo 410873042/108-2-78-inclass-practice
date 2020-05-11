@@ -1,5 +1,0 @@
-"0","str_view_all(studentIds, ""107|108"") # 可不寫()
-"
-"2","Error in str_view_all(studentIds, ""107|108"") : 
-  沒有這個函數 ""str_view_all""
-"
