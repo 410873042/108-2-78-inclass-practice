@@ -1,0 +1,24 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589729858844.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3592651973",
+    "id" : "D8B5ED6A",
+    "lastKnownWriteTime" : 1589729608,
+    "last_content_update" : 1589729608,
+    "path" : "C:/Users/ert51/Downloads/homework5.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "chunk_output_type" : "console"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
