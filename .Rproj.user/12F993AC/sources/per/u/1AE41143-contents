@@ -417,6 +417,7 @@ str_view_all(heartSutra,"色") # 檢視
 str_count(heartSutra,"色") # 計數
 
 str_view_all(heartSutra,"異色")
+str_count(heartSutra,"異色")
 ```
 ```{r}
 studentIds <- c("410873029","410773005","410772035","410562123")
