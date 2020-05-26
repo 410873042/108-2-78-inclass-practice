@@ -5,7 +5,7 @@
     "dirty" : false,
     "encoding" : "",
     "folds" : "",
-    "hash" : "2250506039",
+    "hash" : "0",
     "id" : "1AE41143",
     "lastKnownWriteTime" : 0,
     "last_content_update" : 1589729330078,
@@ -13,8 +13,8 @@
     "project_path" : null,
     "properties" : {
         "cursorPosition" : "823,32",
-        "last_setup_crc32" : "9C38536Ebb338d19",
-        "scrollLine" : "818",
+        "last_setup_crc32" : "",
+        "scrollLine" : "0",
         "tempName" : "Untitled2"
     },
     "read_only" : false,
