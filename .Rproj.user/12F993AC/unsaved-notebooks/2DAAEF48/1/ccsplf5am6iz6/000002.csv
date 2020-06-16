@@ -1,0 +1,4 @@
+"0","  SOAR::Store(weather_next36hours) # 存在.R_cache environment中
+"
+"2","Error in loadNamespace(name) : there is no package called ‘SOAR’
+"
