@@ -1,0 +1,178 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+```{r}
+listExample <- list(student = "小明", 學期 = list(`108-1` = list(list(name = "個體經濟學", 
+    teacher = "Alice", grade = 85)), `108-2` = list(list(name = "總體經濟學", 
+    teacher = "Mark", grade = 78))))
+# 有多少位置可選：
+length(listExample)
+```
+```{r}
+listExample[[1]]
+listExample[[2]]
+```
+```{r}
+numVector <- c(2, 3, 6, -1, 4, 2, 6)
+select1 <- numVector[c(1, 4)]
+select1
+select2 <- select1[[1]]
+select2
+
+# 相當於
+numVector[c(1, 4)][[1]]
+```
+```{r}
+listExample <- list(student = "小明", 學期 = list(`108-1` = list(list(name = "個體經濟學", 
+    teacher = "Alice", grade = 85)), `108-2` = list(list(name = "總體經濟學", 
+    teacher = "Mark", grade = 78))))
+# 有多少位置可選：
+length(listExample)
+```
+```{r}
+str(listExample)
+
+# 108-1新增一科目成績
+listExample$學期$`108-1`[[2]] <- list( name = "產業經濟學")
+str(listExample)
+
+listExample$學期$`108-1`[[2]][c("teacher", "grade")] <- list("Wen", 88)
+str(listExample)
+```
+```{r}
+library(lubridate)
+list1 <- list(list(name = "Jack", birthday = ymd("1998-03-21"), status = c(height = 177, 
+    weight = 80)), list(name = "Mary", birthday = ymd("1998-08-24"), status = c(height = 163, 
+    weight = 45), age = 21, bloodType = "AB"))
+str(list1)
+```
+```{r}
+str(list1)
+list1[[1]]  <- list1[[1]][-3]
+
+list1[[2]] <- list1[[2]][-c(4, 5)]
+```
+```{r}
+str(list1)
+```
+```{r}
+a <- c(2, 3, 5)
+b <- c(4, -1, 3)
+a%%b
+# 相當於
+c(2%%4, 3%%(-1), 5%%3)
+
+a^b
+```
+```{r}
+# 狀況一: 堆疊一定倍數剛好一樣長
+c(2, 3)/c(-2, -13, 10, 22)
+c(2, 3, 2, 3)/c(-2, -13, 10, 22)
+```
+```{r}
+# 狀況二: 倍數堆疊一定會超過，只好截斷
+c(2, 3)/c(-2, -13, 10)
+c(2, 3, 2)/c(-2, -13, 10)
+```
+```{r}
+paste0(c("我叫"), c("小明", "小美"))
+```
+```{r}
+sequenceNums <- c(11, 6, 8, 11, 12, 11, 3, 7, 10, 8)
+
+pick_evens <- (sequenceNums%%2) == 0
+sequenceNums[pick_evens]
+```
+```{r}
+x <- c(1, 5, 8)
+y <- c(5, 8)
+
+# x裡的元素值是不是屬於y集合
+x %in% y
+```
+```{r}
+x2 <- c(1, NA, 10)
+y2 <- c(-1, NA, 20)
+
+x3 <- c(NA, "小花")
+y3 <- c(NA, "小華")
+```
+```{r}
+x2
+is.na(x2)
+```
+```{r}
+library(stringr)
+fruit <- c("apple", "banana", "pear", "pinapple")
+str_detect(fruit, "a")
+str_detect(fruit, "^a")
+str_detect(fruit, "a$")
+str_detect(fruit, "b")
+str_detect(fruit, "[aeiou]")
+
+# Also vectorised over pattern
+str_detect("aecfg", letters)
+
+# Returns TRUE if the pattern do NOT match
+str_detect(fruit, "^p", negate = TRUE)
+```
+```{r}
+char1 <- c("Wild", "Apple", "Donald", "May", "Avocada")
+factor1 <- factor(char1)
+levels(factor1)
+```
+```{r}
+char2 <- c("蔡英文", "習近平", "Donald Trump", "蔡頭")
+factor2 <- factor(char2)
+levels(factor2)
+
+sort(str_sub(char2, 1, 1))
+sort(str_sub(char2, 2, 2))
+```
+```{r}
+Sys.getlocale("LC_COLLATE")
+```
+```{r}
+covid19 <- jsonlite::fromJSON("https://od.cdc.gov.tw/eic/Day_Confirmation_Age_County_Gender_19CoV.json")
+```
+```{r}
+# 不可排序類別：性別、縣市、是否境外移入
+covid19$縣市 <- factor(covid19$縣市)
+covid19$性別 <- factor(covid19$性別)
+covid19$是否為境外移入 <- factor(covid19$是否為境外移入)
+```
+```{r}
+# 可排序類別資料：年齡層
+covid19$年齡層 <- factor(covid19$年齡層, ordered = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

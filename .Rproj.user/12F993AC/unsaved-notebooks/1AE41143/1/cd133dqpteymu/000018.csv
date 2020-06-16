@@ -1,4 +1,0 @@
-"0","askSilly_weather(""臺中市"")"
-"2","Error in eval(parse(text = text, keep.source = FALSE), envir) : 
-  缺少引數 ""dateInput""，也沒有預設值
-"
